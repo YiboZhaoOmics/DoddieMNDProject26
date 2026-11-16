@@ -1,0 +1,97 @@
+ID	Name
+GO:0048227	plasma membrane to endosome transport
+GO:2000643	positive regulation of early endosome to late endosome transport
+GO:2000642	negative regulation of early endosome to late endosome transport
+GO:2000641	regulation of early endosome to late endosome transport
+GO:1905668	positive regulation of protein localization to endosome
+GO:1905667	negative regulation of protein localization to endosome
+GO:1905666	regulation of protein localization to endosome
+GO:1905749	regulation of endosome to plasma membrane protein transport
+GO:1905751	positive regulation of endosome to plasma membrane protein transport
+GO:1905750	negative regulation of endosome to plasma membrane protein transport
+GO:1904979	negative regulation of endosome organization
+GO:1904978	regulation of endosome organization
+GO:1904980	positive regulation of endosome organization
+GO:0099152	regulation of neurotransmitter receptor transport, endosome to postsynaptic membrane
+GO:0099158	regulation of recycling endosome localization within postsynapse
+GO:0006895	Golgi to endosome transport
+GO:0099638	endosome to plasma membrane protein transport
+GO:0099639	neurotransmitter receptor transport, endosome to plasma membrane
+GO:0099646	neurotransmitter receptor transport, plasma membrane to endosome
+GO:0099592	endocytosed synaptic vesicle processing via endosome
+GO:0099593	endocytosed synaptic vesicle to endosome fusion
+GO:0036010	protein localization to endosome
+GO:0036466	synaptic vesicle recycling via endosome
+GO:0075514	endosome lysis involved in viral entry into host cell
+GO:0075502	endosome membrane permeabilization involved in viral entry into host cell
+GO:0032509	endosome transport via multivesicular body sorting pathway
+GO:0032511	late endosome to vacuole transport via multivesicular body sorting pathway
+GO:0032510	endosome to lysosome transport via multivesicular body sorting pathway
+GO:0061910	autophagosome-endosome fusion
+GO:1905279	regulation of retrograde transport, endosome to Golgi
+GO:1905281	positive regulation of retrograde transport, endosome to Golgi
+GO:1905280	negative regulation of retrograde transport, endosome to Golgi
+GO:0061764	late endosome to lysosome transport via multivesicular body sorting pathway
+GO:0140024	plus-end-directed endosome transport along mitotic spindle midzone microtubule
+GO:0034499	late endosome to Golgi transport
+GO:0034498	early endosome to Golgi transport
+GO:0071955	recycling endosome to Golgi transport
+GO:1902946	protein localization to early endosome
+GO:1902822	regulation of late endosome to lysosome transport
+GO:1902823	negative regulation of late endosome to lysosome transport
+GO:1902824	positive regulation of late endosome to lysosome transport
+GO:1902965	regulation of protein localization to early endosome
+GO:1902966	positive regulation of protein localization to early endosome
+GO:1902774	late endosome to lysosome transport
+GO:0090117	endosome to lysosome transport of low-density lipoprotein particle
+GO:0039654	fusion of virus membrane with host endosome membrane
+GO:0010786	clathrin coating of Golgi vesicle, trans-Golgi to endosome targeting
+GO:0140285	endosome fission
+GO:0007032	endosome organization
+GO:0042147	retrograde transport, endosome to Golgi
+GO:0045022	early endosome to late endosome transport
+GO:0043485	endosome to pigment granule transport
+GO:0098943	neurotransmitter receptor transport, postsynaptic endosome to lysosome
+GO:0098968	neurotransmitter receptor transport postsynaptic membrane to endosome
+GO:0098887	neurotransmitter receptor transport, endosome to postsynaptic membrane
+GO:0045324	late endosome to vacuole transport
+GO:0016189	synaptic vesicle to endosome fusion
+GO:0016182	synaptic vesicle budding from endosome
+GO:0008333	endosome to lysosome transport
+GO:0097750	endosome membrane tubulation
+GO:0044795	trans-Golgi network to recycling endosome transport
+GO:0002499	proteolysis within endosome associated with antigen processing and presentation
+GO:0035646	endosome to melanosome transport
+GO:0051036	regulation of endosome size
+GO:1905363	positive regulation of endosomal vesicle fusion
+GO:1905362	negative regulation of endosomal vesicle fusion
+GO:1905367	positive regulation of intralumenal vesicle formation
+GO:1905366	negative regulation of intralumenal vesicle formation
+GO:1905365	regulation of intralumenal vesicle formation
+GO:1905364	regulation of endosomal vesicle fusion
+GO:0099532	synaptic vesicle endosomal processing
+GO:0099627	neurotransmitter receptor cycle
+GO:0099630	postsynaptic neurotransmitter receptor cycle
+GO:0036257	multivesicular body organization
+GO:0036258	multivesicular body assembly
+GO:0075509	endocytosis involved in viral entry into host cell
+GO:0075512	clathrin-dependent endocytosis of virus by host cell
+GO:0075513	caveolin-mediated endocytosis of virus by host cell
+GO:0075503	fusion of virus membrane with host macropinosome membrane
+GO:0048549	positive regulation of pinocytosis
+GO:0048548	regulation of pinocytosis
+GO:0048550	negative regulation of pinocytosis
+GO:0034058	endosomal vesicle fusion
+GO:0061763	multivesicular body-lysosome fusion
+GO:0032456	endocytic recycling
+GO:0039664	lysis of host organelle involved in viral entry into host cell
+GO:0038010	positive regulation of signal transduction by receptor internalization
+GO:0038015	positive regulation of insulin receptor signaling pathway by insulin receptor internalization
+GO:0070676	intralumenal vesicle formation
+GO:0071828	apolipoprotein E recycling
+GO:0098927	vesicle-mediated transport between endosomal compartments
+GO:0016197	endosomal transport
+GO:0016237	microautophagy
+GO:0097352	autophagosome maturation
+GO:1901245	positive regulation of toll-like receptor 9 signaling pathway by B cell receptor internalization
+GO:0140624	EGAD pathway

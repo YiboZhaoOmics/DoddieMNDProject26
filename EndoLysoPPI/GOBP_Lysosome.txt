@@ -1,0 +1,82 @@
+ID	Name
+GO:1905671	regulation of lysosome organization
+GO:1905673	positive regulation of lysosome organization
+GO:1905672	negative regulation of lysosome organization
+GO:0099074	mitochondrion to lysosome vesicle-mediated transport
+GO:0141013	purine nucleotide import into lysosome
+GO:0061462	protein localization to lysosome
+GO:0062196	regulation of lysosome size
+GO:0140916	zinc ion import into lysosome
+GO:0032510	endosome to lysosome transport via multivesicular body sorting pathway
+GO:0061911	amphisome-lysosome fusion
+GO:0061909	autophagosome-lysosome fusion
+GO:0061763	multivesicular body-lysosome fusion
+GO:0061764	late endosome to lysosome transport via multivesicular body sorting pathway
+GO:0061740	protein targeting to lysosome involved in chaperone-mediated autophagy
+GO:0032418	lysosome localization
+GO:0150033	negative regulation of protein localization to lysosome
+GO:0150031	regulation of protein localization to lysosome
+GO:0150032	positive regulation of protein localization to lysosome
+GO:1902822	regulation of late endosome to lysosome transport
+GO:1902823	negative regulation of late endosome to lysosome transport
+GO:1902824	positive regulation of late endosome to lysosome transport
+GO:1902774	late endosome to lysosome transport
+GO:0090120	lysosome to ER cholesterol transport
+GO:0090117	endosome to lysosome transport of low-density lipoprotein particle
+GO:0090160	Golgi to lysosome transport
+GO:0090389	phagosome-lysosome fusion involved in apoptotic cell clearance
+GO:0090385	phagosome-lysosome fusion
+GO:0006622	protein targeting to lysosome
+GO:0007040	lysosome organization
+GO:1990927	calcium ion regulated lysosome exocytosis
+GO:0160156	secretory granule-lysosome fusion
+GO:0160177	positive regulation of autophagosome-lysosome fusion
+GO:0098943	neurotransmitter receptor transport, postsynaptic endosome to lysosome
+GO:0016256	N-glycan processing to lysosome
+GO:0008333	endosome to lysosome transport
+GO:0002500	proteolysis within lysosome associated with antigen processing and presentation
+GO:0170064	lysosome fission
+GO:1905146	lysosomal protein catabolic process
+GO:1905165	regulation of lysosomal protein catabolic process
+GO:1905167	positive regulation of lysosomal protein catabolic process
+GO:1905166	negative regulation of lysosomal protein catabolic process
+GO:0006909	phagocytosis
+GO:0141204	dipeptide transmembrane transport from lysosomal lumen to cytosol
+GO:0061684	chaperone-mediated autophagy
+GO:0062093	lysophagy
+GO:0032509	endosome transport via multivesicular body sorting pathway
+GO:0061919	process utilizing autophagic mechanism
+GO:0061956	penetration of cumulus oophorus
+GO:0007341	penetration of zona pellucida
+GO:0071985	multivesicular body sorting pathway
+GO:0090122	cholesterol ester hydrolysis involved in cholesterol transport
+GO:0090387	phagolysosome assembly involved in apoptotic cell clearance
+GO:0039664	lysis of host organelle involved in viral entry into host cell
+GO:0038020	insulin receptor recycling
+GO:0038019	Wnt receptor recycling
+GO:0038018	Wnt receptor catabolic process
+GO:0031623	receptor internalization
+GO:0007041	lysosomal transport
+GO:0007042	lysosomal lumen acidification
+GO:0160155	crinophagy
+GO:0070086	ubiquitin-dependent endocytosis
+GO:0045324	late endosome to vacuole transport
+GO:0016237	microautophagy
+GO:0016239	positive regulation of macroautophagy
+GO:0097352	autophagosome maturation
+GO:0097212	lysosomal membrane organization
+GO:0097214	positive regulation of lysosomal membrane permeability
+GO:0097213	regulation of lysosomal membrane permeability
+GO:0097215	negative regulation of lysosomal membrane permeability
+GO:0044656	regulation of post-lysosomal vacuole size
+GO:1901097	negative regulation of autophagosome maturation
+GO:1901096	regulation of autophagosome maturation
+GO:1901098	positive regulation of autophagosome maturation
+GO:0043162	ubiquitin-dependent protein catabolic process via the multivesicular body sorting pathway
+GO:0001845	phagolysosome assembly
+GO:0035646	endosome to melanosome transport
+GO:0035694	mitochondrial protein catabolic process
+GO:0035695	mitophagy by internal vacuole formation
+GO:0035752	lysosomal lumen pH elevation
+GO:0170063	transmembrane transport from lysosomal lumen to cytosol
+GO:0140505	regulation of microlipophagy
