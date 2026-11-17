@@ -79,25 +79,48 @@ GO:BP terms were retrieved using keyword searches.
 - **Search keyword:** `lysosome`
 - **Number of GO:BP terms returned:** 81
 - **Output file:** `GOBP_Lysosome.txt`
+- Removed 12 terms (1 Obsolete term + 11 non-human terms)
+- Produce N = 1334 proteins + protein_complexes
 
 #### Endosome-associated biological processes
 
 - **Search keyword:** `endosome`
-- **Number of GO:BP terms returned:** 96
+- **Number of GO:BP terms returned:** 96 
 - **Output file:** `GOBP_Endosome.txt`
+- Removed 29 terms (10 Obsolete terms + 19 non-human terms)
+- Produce N = 610 proteins + protein_complexes
 
-Genes/proteins annotated to the retrieved GO:BP terms were extracted using the **GO.db** R package.
+Genes/proteins annotated to the retrieved GO:BP terms were extracted via QuickGO API.
 
 The extraction was performed using the following R script:
 
-- `R_GOdb.R`
+- `R_retrieve_GO_genes.R`
 
-### 2.3. Key files
+## 3. EndoLyso Gene List v1.1
+
+### 3.1 Merge GO:CC and GO:BP gene lists
+
+This generates the EndoLyso Gene List v1.0 (N = 2487 after removing 124 protein complexes)
+
+### 3.2 Compare with the 2 previously published PPI
+
+Add another 113 genes/proteins
+
+This generates EndoLyso Gene List v1.1 (N = 2600)
+
+The merge was performed using the following R script:
+
+- `R_merge_EndoLysoList_v1.1.R`
+
+## 4. Key files
 
 | File | Description |
 |:---|:---|
 | `GOBP_Lysosome.txt` | GO:BP terms retrieved using the keyword search "lysosome" (81 terms). |
 | `GOBP_Endosome.txt` | GO:BP terms retrieved using the keyword search "endosome" (96 terms). |
-| `R_GOdb.R` | R script using the GO.db package to extract genes/proteins annotated to the selected GO:BP terms. |
+| `R_merge_EndoLysoList_v1.1.R` | R script using to merge 3 gene/protein list to the EndoLyso Gene List v1.1. |
+| `R_retrieve_GO_genes.R` | R script using to extract genes/proteins annotated to the selected GO:BP terms. |
+| `quickgo_functions.R` | Source R function for GO term QC. |
+| `get_GO_genes.R` | Source R function for QuickGO API connection. |
 
 ---
