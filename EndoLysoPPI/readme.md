@@ -1,126 +1,64 @@
 # Endo-Lysosomal Protein Interactome Construction
 
-## Overview
+## 1. Analysis Overview
 
-This repository contains resources used for the construction of an endo-lysosomal protein interactome. It integrates previously published endo-lysosomal protein interactomes with gene/protein lists obtained from Gene Ontology (GO) annotations, covering both lysosomal and endosomal compartments and their associated biological processes.
+The endo-lysosomal system plays an essential role in intracellular trafficking, protein degradation, and cellular homeostasis. Constructing a comprehensive protein–protein interaction (PPI) network of this system will help characterize its molecular organization and identify potential interactions among proteins involved in endosomal and lysosomal functions.
 
-The resources are organized into two main sections:
+Two previously published endo-lysosomal PPI datasets were collected as reference resources:
 
-1. Previously published endo-lysosomal protein interactomes.
-2. Gene/protein lists collected from Gene Ontology Cellular Component (GO:CC) and Biological Process (GO:BP) annotations.
+- **Published interactome 1:** 709 proteins ([Nature Communications](https://www.nature.com/articles/s41467-022-33951-0))
+- **Published interactome 2:** 768 proteins ([Journal of General Physiology](https://rupress.org/jgp/article-pdf/158/4/e202413745/2036727/jgp_202413745.pdf))
 
----
+These published interactomes primarily focused on proteins associated with endo-lysosomal cellular compartments (Cellular Component, CC). To establish a more comprehensive network, this project expands the protein list by incorporating genes/proteins associated with both **Cellular Component (CC)** and **Biological Process (BP)** annotations from Gene Ontology (GO).
 
-## 1. Previously Published Interactomes
+The resulting protein list is subsequently curated and used to construct an integrated endo-lysosomal PPI network using interaction data from multiple major repositories and platforms.
 
-Two previously published resources were collected and used as reference datasets for endo-lysosomal protein interactome construction.
+## 2. Methodology Overview
 
-### 1.1. First published interactome
+The construction of the endo-lysosomal protein interactome consists of four main steps:
 
-- **Number of proteins:** 709
-- **Source:** [Nature Communications](https://www.nature.com/articles/s41467-022-33951-0)
+### 1. Protein List Retrieval (EndoLyso Gene List v1.0)
 
-### 1.2. Second published interactome
+Genes/proteins associated with the endo-lysosomal system were retrieved from Gene Ontology (GO) annotations, covering both Cellular Component (CC) and Biological Process (BP).
 
-- **Number of proteins:** 768
-- **Source:** [Journal of General Physiology](https://rupress.org/jgp/article-pdf/158/4/e202413745/2036727/jgp_202413745.pdf)
+- **GO:CC:** Retrieved proteins and protein complexes annotated to:
+  - Lysosome (`GO:0005764`): 816 proteins and 32 protein complexes.
+  - Endosome (`GO:0005768`): 2,148 proteins and 52 protein complexes.
+- **GO:BP:** Retrieved genes/proteins associated with lysosome- and endosome-related biological processes using the respective keywords in GO:BP. Annotations were retrieved via the QuickGO API.
+  - Lysosome: 81 GO:BP terms retrieved.
+  - Endosome: 96 GO:BP terms retrieved.
 
-**Note:** The bibliographic details of the second reference should be verified, as the supplied publication link does not appear to correspond to an interactome dataset.
+The CC- and BP-associated gene/protein lists were combined, resulting in **EndoLyso Gene List v1.0 (2482 entries)** after removing duplicates and protein complexes.
 
-### 1.3. Shared proteins between the two interactomes
+### 2. Integration with Published Interactomes (EndoLyso Gene List v1.1)
 
-Comparison of the two published protein lists identified **594 shared proteins**.
+The EndoLyso Gene List v1.0 was compared and integrated with the two previously published endo-lysosomal PPI protein lists.
 
-| Dataset | Number of proteins |
-|:---|---:|
-| First published interactome | 709 |
-| Second published interactome | 768 |
-| Shared proteins | **594** |
+An additional 113 genes/proteins were identified, generating **EndoLyso Gene List v1.1 (2595 genes/proteins)**.
 
----
+### 3. Protein Quality Control Using UniProt (EndoLyso Gene List v1.2)
 
-## 2. Resources of Endo-Lysosomal Gene/Protein Lists
+The protein list was further curated using UniProt to retain only proteins with a **Reviewed** status, ensuring that the final list consists of proteins with manually reviewed UniProt entries.
 
-Gene and protein lists associated with the endo-lysosomal system were collected using Gene Ontology (GO) annotations.
+This generated **EndoLyso Gene List v1.2 (2428 entries)**, which was used as the input for PPI extraction.
 
-### 2.1. Gene Ontology Cellular Component (GO:CC)
+### 4. PPI Data Extraction and Network Construction (EndoLyso PPIN v1)
 
-Protein and protein-complex annotations were retrieved using the following GO:CC terms. The organism filter was set to *Homo sapiens*.
+Protein–protein interactions among the curated protein list were retrieved from three major PPI repositories and platforms:
 
-#### Lysosome
+- **PINOT**
+- **HIPPIE**
+- **MIST**
 
-- **GO term:** `GO:0005764`
-- **GO term name:** Lysosome
-- **Organism:** *Homo sapiens*
-- **Number of proteins:** 816
-- **Number of protein complexes:** 32
+The retrieved interaction datasets were used to construct the integrated **EndoLyso Protein–Protein Interaction Network (EndoLyso PPIN v1.0)**.
 
-#### Endosome
-
-- **GO term:** `GO:0005768`
-- **GO term name:** Endosome
-- **Organism:** *Homo sapiens*
-- **Number of proteins:** 2,148
-- **Number of protein complexes:** 52
-
-The reported counts are after removal of duplicates.
-
-| GO:CC term | GO ID | Organism | Proteins | Protein complexes |
-|:---|:---|:---|---:|---:|
-| Lysosome | GO:0005764 | *Homo sapiens* | 816 | 32 |
-| Endosome | GO:0005768 | *Homo sapiens* | 2,148 | 52 |
-
-### 2.2. Gene Ontology Biological Process (GO:BP)
-
-GO:BP terms were retrieved using keyword searches.
-
-#### Lysosome-associated biological processes
-
-- **Search keyword:** `lysosome`
-- **Number of GO:BP terms returned:** 81
-- **Output file:** `GOBP_Lysosome.txt`
-- Removed 12 terms (1 Obsolete term + 11 non-human terms)
-- Produce N = 1334 proteins + protein_complexes
-
-#### Endosome-associated biological processes
-
-- **Search keyword:** `endosome`
-- **Number of GO:BP terms returned:** 96 
-- **Output file:** `GOBP_Endosome.txt`
-- Removed 29 terms (10 Obsolete terms + 19 non-human terms)
-- Produce N = 610 proteins + protein_complexes
-
-Genes/proteins annotated to the retrieved GO:BP terms were extracted via QuickGO API.
-
-The extraction was performed using the following R script:
-
-- `R_retrieve_GO_genes.R`
-
-## 3. EndoLyso Gene List v1.1
-
-### 3.1 Merge GO:CC and GO:BP gene lists
-
-This generates the EndoLyso Gene List v1.0 (N = 2487 after removing 124 protein complexes)
-
-### 3.2 Compare with the 2 previously published PPI
-
-Add another 113 genes/proteins
-
-This generates EndoLyso Gene List v1.1 (N = 2600)
-
-The merge was performed using the following R script:
-
-- `R_merge_EndoLysoList_v1.1.R`
-
-## 4. Key files
+## 3. File Dictionary
 
 | File | Description |
 |:---|:---|
 | `GOBP_Lysosome.txt` | GO:BP terms retrieved using the keyword search "lysosome" (81 terms). |
 | `GOBP_Endosome.txt` | GO:BP terms retrieved using the keyword search "endosome" (96 terms). |
-| `R_merge_EndoLysoList_v1.1.R` | R script using to merge 3 gene/protein list to the EndoLyso Gene List v1.1. |
-| `R_retrieve_GO_genes.R` | R script using to extract genes/proteins annotated to the selected GO:BP terms. |
-| `quickgo_functions.R` | Source R function for GO term QC. |
-| `get_GO_genes.R` | Source R function for QuickGO API connection. |
-
----
+| `R_retrieve_GO_genes.R` | R script for extracting genes/proteins annotated to the selected GO:BP terms via the QuickGO API. |
+| `quickgo_functions.R` | Source R functions for GO term quality control. |
+| `get_GO_genes.R` | Source R functions for connecting to the QuickGO API and retrieving annotated genes/proteins to generate EndoLyso Gene List v1.0. |
+| `R_merge_EndoLysoList_v1.2.R` | R script for merging the GO-derived gene/protein lists with the two published interactome lists to generate EndoLyso Gene List v1.2. |
