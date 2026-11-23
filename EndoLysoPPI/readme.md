@@ -44,13 +44,13 @@ This generated **EndoLyso Gene List v1.2 (2428 entries)**, which was used as the
 
 ### 4. PPI Data Extraction and Network Construction (EndoLyso PPIN v1)
 
-Protein–protein interactions among the curated protein list were retrieved from three major PPI repositories and platforms:
+Protein–protein interactions among the curated protein list were retrieved from three major PPI repositories and platforms (num. of entries after QC):
 
-- **PINOT**
-- **HIPPIE**
-- **MIST**
+- **PINOTv1.1 (Stringent)**: 51177
+- **HIPPIEv3.0**: 52515
+- **MISTv6.0**: 51924
 
-The retrieved interaction datasets were used to construct the integrated **EndoLyso Protein–Protein Interaction Network (EndoLyso PPIN v1.0)**.
+The retrieved interaction datasets were merged to construct the integrated **EndoLyso Protein–Protein Interaction Network (EndoLyso PPIN v1.0)** (N = 56473 entries).
 
 ## 3. File Dictionary
 
