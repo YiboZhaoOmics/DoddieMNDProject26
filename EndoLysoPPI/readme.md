@@ -64,3 +64,6 @@ Out of these edges, 2311 nodes remained in the **EndoLyso Gene List v1.3**
 | `quickgo_functions.R` | Source R functions for GO term quality control. |
 | `get_GO_genes.R` | Source R functions for connecting to the QuickGO API and retrieving annotated genes/proteins to generate EndoLyso Gene List v1.0. |
 | `R_merge_EndoLysoList_v1.2.R` | R script for merging the GO-derived gene/protein lists with the two published interactome lists to generate EndoLyso Gene List v1.2. |
+| `R_retrieve_PPI` | R script for retrieve PPIs from HIPPIEv3.0, MIST_humanV6.0, PINOTv1.1. |
+| `R_merge_ELPPINv1.0.R` | R script for merge PPI lists from the 3 platforms. |
+| `R_manually_mapping_check_EndoLysoPPI_genelist_v1.3.R` | R script for the final QC to remove duplicates due to multi-matched IDs to generate Gene List v1.3 & PPINv1.1. |
