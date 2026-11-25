@@ -1,4 +1,6 @@
 # merge PPIs retrieved from 3 datasets
+## compare with Singh PPI and Nanarova PPI
+
 ## HIPPIE and MIST needs QC -> remove duplicates including A->B B->A
 ELPPI <- readRDS("EndoLysoPPI/ELPPI.rds")
 ELPPI_HIPPIE <- ELPPI$HIPPIE
@@ -85,4 +87,39 @@ ELPPI_merge <- data.frame("EntrezA" = as.numeric(pair_split[,1]),
 # )
 # saveRDS(ELPPI, "~/Library/CloudStorage/OneDrive-UniversityCollegeLondon/UCLPDRA2026/Doodie/EndoLysoPPI/ELPPI.rds")
 setwd("EndoLysoPPI")
+
+## add other types of ID (GeneName should NOT be used as matching ID)
+
+ELlist <- read.delim("EndoLysoPPI_genelist_v1.2.txt")
+
+ELPPI_merge$SwissA <- ELlist$Entry[match(ELPPI_merge$EntrezA, ELlist$Entrez)]
+ELPPI_merge$SwissB <- ELlist$Entry[match(ELPPI_merge$EntrezB, ELlist$Entrez)]
+
+ELPPI_merge$GeneNameA <- ELlist$PrimaryGeneNames[match(ELPPI_merge$EntrezA, ELlist$Entrez)]
+ELPPI_merge$GeneNameB <- ELlist$PrimaryGeneNames[match(ELPPI_merge$EntrezB, ELlist$Entrez)]
+
 write.table(ELPPI_merge, "ELPPINv1_edge.txt", sep = "\t", row.names = F, quote = F)
+
+#####################################
+### Overlap with Singh & Nanarova ###
+#####################################
+setwd("EndoLysoPPI")
+library(readxl)
+library(dplyr)
+library(tidyr)
+Singh_Edges <- read_xlsx("SinghPPI_edges.xlsx", sheet = "1_All_XLs_5%_FDR") # match with uniprot ID
+Singh_Edgelist1 <- paste(Singh_Edges$`Accession A`, Singh_Edges$`Accession B`, sep  = "-")
+Singh_Edgelist2 <- paste(Singh_Edges$`Accession B`, Singh_Edges$`Accession A`, sep = "-")
+
+Nanarova_Edges <- read.csv("Nanarova_Lysosomal_PPI_edges.csv") # match with gene name
+Nanarova_Edges <- separate(Nanarova_Edges, col = "name", sep = " ", into = c("nameA", "edge","nameB"))
+Nanarova_Edgelist1 <- paste(Nanarova_Edges$nameA, Nanarova_Edges$nameB, sep = "-")
+Nanarova_Edgelist2 <- paste(Nanarova_Edges$nameB, Nanarova_Edges$nameA, sep = "-")
+
+EL_EdgelistU <- paste(ELPPI_merge$SwissA, ELPPI_merge$SwissB, sep = "-")
+EL_EdgelistN <- paste(ELPPI_merge$GeneNameA, ELPPI_merge$GeneNameB, sep = "-")
+
+length(intersect(unique(c(Singh_Edgelist1,Singh_Edgelist2)), EL_EdgelistU)) # N = 123/951
+length(intersect(unique(c(Nanarova_Edgelist1,Nanarova_Edgelist2)), EL_EdgelistN)) # N = 1822/8092
+
+
