@@ -58,8 +58,6 @@ Out of these edges, 2311 nodes remained in the **EndoLyso Gene List v1.3**
 
 | File | Description |
 |:---|:---|
-| `GOBP_Lysosome.txt` | GO:BP terms retrieved using the keyword search "lysosome" (81 terms). |
-| `GOBP_Endosome.txt` | GO:BP terms retrieved using the keyword search "endosome" (96 terms). |
 | `R_retrieve_GO_genes.R` | R script for extracting genes/proteins annotated to the selected GO:BP terms via the QuickGO API. |
 | `quickgo_functions.R` | Source R functions for GO term quality control. |
 | `get_GO_genes.R` | Source R functions for connecting to the QuickGO API and retrieving annotated genes/proteins to generate EndoLyso Gene List v1.0. |
