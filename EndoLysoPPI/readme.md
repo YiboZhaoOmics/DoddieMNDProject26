@@ -51,8 +51,8 @@ Protein–protein interactions among the curated protein list were retrieved fro
 - **MISTv6.0**: 51924
 
 The retrieved interaction datasets were merged to construct the integrated **EndoLyso Protein–Protein Interaction Network (EndoLyso PPIN v1.0)** (N = 56473 entries).
-After remove duplicates (N = 32) due to multi-matched IDs, 56441 edges remained in the **EndoLyso PPIN v1.1**
-Out of these edges, 2311 nodes remained in the **EndoLyso Gene List v1.3**
+After remove duplicates (N = 82) due to multi-matched IDs, 56391 edges remained in the **EndoLyso PPIN v1.1**
+Out of these edges, 2308 nodes remained in the **EndoLyso Gene List v1.3**
 
 ## 3. File Dictionary
 
